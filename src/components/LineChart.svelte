@@ -5,15 +5,7 @@
     export let LineChartData;
     export let GroupName;
 
-    // Normalize the case of groups for comparison
-    $: normalizedGroups = groups.map(g => g.toLowerCase());
 
-    // Reactively update the index based on groupname, ensuring case-insensitive comparison
-    $: pass_index = normalizedGroups.indexOf(GroupName);
-
-    $: if (pass_index !== -1) {
-        LineVisibilityFunction(pass_index);
-    }
     // The chart dimensions and margins as optional props.
     export let width = 1000;
     export let height = 400;
@@ -25,35 +17,20 @@
     const startDate = d3.timeParse("%Y-%m")("2010-01");
     const endDate = d3.timeParse("%Y-%m")("2024-02");
 
-    let lastAction = ""; // Possible values: "button", "groupname"
-    let pass_index = -1; // Assuming this gets updated on button click
-    let groupNameIndex = -1; // This should be updated when `groupname` changes
-
-    $: groupNameIndex = GroupName ? normalizedGroups.indexOf(GroupName.toLowerCase()) : -1;
-
-    $: if (lastAction === "button") {
-        console.log(lastAction)
-        lineVisibility = lineVisibility.map((_, i) => i === pass_index);
-    } else if (lastAction === "GroupName") {
-        console.log(lastAction)
-        lineVisibility = lineVisibility.map((_, i) => i === groupNameIndex);
-    }
-
-    function handleButtonClick(index) {
-        pass_index = index;
-        lastAction = "button";
-        // Optionally toggle visibility or directly set it
-        // lineVisibility[index] = !lineVisibility[index]; // For toggling
-    }
-
-    $: if (GroupName) {
-        lastAction = "GroupName";
-        // groupNameIndex is already being updated reactively
-    }
-
-    let lineVisibility = Array(36).fill(false);
-    $: lineVisibility = lineVisibility.map((_, i) => i === pass_index);
     let groups = ['2NE1', '4minute', 'After School', 'Apink', 'Brave Girls', 'Brown Eyed Girls', 'Davichi', "f(x)", "Girl's Day", "Girl's Generation", 'Kara', 'miss A', 'Secret', 'SISTAR', 'T-ara', 'Wonder Girls', 'AOA', 'BLACKPINK', 'EXID', 'GFRIEND', 'I.O.I', 'MAMAMOO', 'MOMOLAND', 'OH MY GIRL', 'Red Velvet', 'TWICE', '(G)I-DLE', 'aespa', 'ITZY', 'IVE', 'IZ*ONE', 'Kep1er', 'LE SSERAFIM', 'NewJeans', 'NMIXX', 'STAYC']
+    $: normalizedGroups = groups.map(g => g.toLowerCase());
+
+    let groupNameIndex = -1;
+    $: groupNameIndex = GroupName ? normalizedGroups.indexOf(GroupName.toLowerCase()) : -1;
+    let lineVisibility = Array(36).fill(false);
+    function handleButtonClick(index) {
+        lineVisibility[index] = !lineVisibility[index];
+        groupNameIndex = -1;
+    }
+    $: if (groupNameIndex) {
+        lineVisibility[groupNameIndex] = !lineVisibility[groupNameIndex];
+        // groupNameIndex = -1;
+    }
 
 
     const colorCodes = [
@@ -149,7 +126,7 @@
             font-size="15px"
             text-anchor="middle"
     >
-        Month, Year
+        Year
     </text>
 
     <!-- y axis Title -->

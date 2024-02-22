@@ -99,7 +99,6 @@
             .on('click', (event, d) => {
                 // Update the details section with the specificInfo of the clicked group
                 GroupName = d.name.toLowerCase();
-                console.log(GroupName)
 
                 detailsSection.style('opacity', 0)
                 setTimeout(() => {
