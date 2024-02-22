@@ -21,6 +21,7 @@
 
 <main>
     <h1>Kpop Girls Group Universe!</h1>
+    <h1>link to writeup: https://github.com/JohnChen034/kpop-girls-group-universe/blob/main/README.md</h1>
     <!--    since fetch needs operation time-->
     {#if data}
         {#if LineChartData}
