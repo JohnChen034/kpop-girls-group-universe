@@ -1,0 +1,67 @@
+{
+  "name": "kpop universe",
+  "children": [
+    {
+      "name": "Girls Generation",
+      "info": "this is info for GG",
+      "debut": 2005,
+      "url" : "assets/2NE1-Logo.png",
+      "specificInfo" : "this is specific info",
+      "children": [
+        {
+          "name": "taeyeon",
+          "info": "this is info for taeyeon"
+        }
+      ]
+    },
+    {
+      "name": "aespa",
+      "info": "this info for aespa",
+      "debut": 2020,
+      "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/108154677_2901278806662328_6823317662975954635_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=-nshfYGnwu0AX9QvyNx&_nc_ht=scontent-lax3-2.xx&oh=00_AfCU7RkvJP6D13g4GOGWVH7r67rxdJKEnfao8z_-1fo-1g&oe=65FCF85C",
+      "specificInfo" : "this is specific info",
+      "children": [
+        {
+          "name": "winter",
+          "info": "this is info for winter"
+        },
+        {
+          "name": "ningning",
+          "info": "this is info for ningning"
+        }
+      ]
+    },
+    {
+      "name": "overlap_aespa",
+      "info": "this info for aespa",
+      "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/108154677_2901278806662328_6823317662975954635_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=-nshfYGnwu0AX9QvyNx&_nc_ht=scontent-lax3-2.xx&oh=00_AfCU7RkvJP6D13g4GOGWVH7r67rxdJKEnfao8z_-1fo-1g&oe=65FCF85C",
+      "specificInfo" : "this is specific info",
+
+      "debut": 2020,
+      "children": [
+        {
+          "name": "winter",
+          "info": "this is info for winter"
+        },
+        {
+          "name": "ningning",
+          "info": "this is info for ningning"
+        }
+      ]
+    },
+    {
+      "name": "Big Bang",
+      "info": "this is info for big bang",
+      "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/108154677_2901278806662328_6823317662975954635_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=-nshfYGnwu0AX9QvyNx&_nc_ht=scontent-lax3-2.xx&oh=00_AfCU7RkvJP6D13g4GOGWVH7r67rxdJKEnfao8z_-1fo-1g&oe=65FCF85C",
+      "debut": 2007,
+      "specificInfo" : "this is specific info",
+      "children": [
+        {
+          "name": "taeyang",
+          "info": "this is info for taeyang"
+        }
+      ]
+    }
+  ]
+}
+
