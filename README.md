@@ -1,5 +1,7 @@
 # Kpop Girl Group Universe
 
+page: https://johnchen034.github.io/kpop-girls-group-universe/
+
 The rise of K-pop has contributed significantly to the global society, drawing in an increased number of enthusiasts. As K-pop fans, we aim to analyze the popularity of various K-pop girl groups from 2010-2024 to explore the trend in their frame. 
 
 To achieve this, we developed an interactive visualization using Svelte and D3. This visualization includes three components, a dot plot illustrating the debut date of each girl group, basic group information, and the popularity changes from 2010-2024.
